@@ -1,0 +1,27 @@
+{
+  "tailor_mode": "always_tailor",
+  "fit_score_threshold": 65,
+  "max_tailor_retries": 3,
+  "discovery_cron": "0 8 * * *",
+  "discovery_sources": {
+    "linkedin": true,
+    "naukri": true,
+    "wellfound": true,
+    "instahyre": true,
+    "glassdoor": false,
+    "indeed": false,
+    "cutshort": true,
+    "company_careers": true,
+    "hn_hiring": true,
+    "yc_jobs": false
+  },
+  "target_roles": [
+    "FullStack Architect",
+    "UI Architect",
+    "AI Engineer",
+    "Applied AI",
+    "Frontend Architect",
+    "Founding Engineer"
+  ],
+  "target_locations": ["Bangalore", "Remote", "Hybrid"]
+}

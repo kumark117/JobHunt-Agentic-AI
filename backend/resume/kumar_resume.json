@@ -1,0 +1,83 @@
+{
+  "name": "Kumar Krishnamoorthy",
+  "email": "kumar.softindies@gmail.com",
+  "location": "Bangalore, India",
+  "title": "Senior Software Engineer | FullStack Architect | AI Engineer",
+  "summary": "15+ years building scalable full-stack systems with deep expertise in frontend architecture, React ecosystems, and applied AI. Led platform-level decisions at scale — component libraries, micro-frontends, SSR pipelines. Recently building agentic AI systems with MCP, ReAct loops, and human-in-the-loop orchestration.",
+  "skills": {
+    "languages": ["TypeScript", "JavaScript", "Python", "SQL"],
+    "frontend": ["React", "Next.js", "Redux", "Tailwind CSS", "Webpack", "Vite", "Storybook", "MFE (Module Federation)"],
+    "backend": ["Node.js", "FastAPI", "Express", "REST", "GraphQL", "WebSockets", "SSE"],
+    "ai_ml": ["Claude SDK", "Anthropic API", "MCP (Model Context Protocol)", "ReAct Agents", "LangChain", "RAG", "Prompt Engineering"],
+    "databases": ["PostgreSQL", "Redis", "MongoDB", "SQLAlchemy", "Prisma"],
+    "devops": ["Docker", "Docker Compose", "GitHub Actions", "Render", "Vercel", "AWS (S3, Lambda, EC2)"],
+    "testing": ["Jest", "Vitest", "Playwright", "pytest", "React Testing Library"],
+    "tools": ["VS Code", "Git", "Figma", "Linear", "Notion"]
+  },
+  "experience": [
+    {
+      "company": "Acme Fintech Pvt Ltd",
+      "title": "Senior Frontend Architect",
+      "location": "Bangalore",
+      "period": "2021 – Present",
+      "bullets": [
+        "Architected a micro-frontend platform using Webpack Module Federation serving 3M+ MAU — reduced team coupling and enabled independent deployments across 6 squads",
+        "Built a design system and component library (100+ components) adopted across 4 product lines, cutting UI dev time by 40%",
+        "Migrated monolithic React app to Next.js App Router with ISR/SSR — improved Core Web Vitals LCP from 4.2s to 1.1s",
+        "Led AI integration initiative: embedded Claude-powered trade explainability panel using Anthropic SDK and MCP tools",
+        "Mentored 5 engineers, ran architecture review board, and defined frontend coding standards across the org"
+      ]
+    },
+    {
+      "company": "DataSync Technologies",
+      "title": "FullStack Engineer",
+      "location": "Bangalore",
+      "period": "2018 – 2021",
+      "bullets": [
+        "Built real-time dashboard with React + FastAPI + WebSockets visualising 10K events/sec from Kafka pipeline",
+        "Designed and shipped GraphQL API layer (Apollo + Node.js) replacing 12 fragmented REST endpoints, reducing client payload sizes by 60%",
+        "Implemented end-to-end testing strategy with Playwright achieving 85% critical-path coverage",
+        "Reduced Docker build times by 70% through multi-stage build optimization and layer caching strategy"
+      ]
+    },
+    {
+      "company": "CloudBase Solutions",
+      "title": "Software Engineer",
+      "location": "Chennai",
+      "period": "2015 – 2018",
+      "bullets": [
+        "Delivered 8 client-facing web applications using React/Node.js with product teams of 3–8 engineers",
+        "Built internal CMS platform reducing content update turnaround from 2 days to 20 minutes",
+        "Introduced automated testing (Jest + Enzyme) on legacy codebase, reducing regression incidents by 55%"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI Researcher for Trading",
+      "description": "Agentic AI system with MCP architecture for automated equity research and signal generation",
+      "bullets": [
+        "Built 4 MCP servers (data, analysis, news, portfolio) with stdio transport — independently testable and crash-isolated",
+        "Implemented ReAct agent loop using Claude claude-sonnet-4-20250514 with tool-use for multi-step research tasks",
+        "FastAPI orchestrator with asyncio HITL gates and SSE push to Next.js dashboard for human-in-the-loop control",
+        "PostgreSQL state machine tracking research sessions, signal history, and agent decision logs"
+      ],
+      "tech": ["FastAPI", "Next.js", "Claude SDK", "MCP", "PostgreSQL", "SSE", "asyncio"]
+    }
+  ],
+  "education": {
+    "degree": "B.E. Computer Science",
+    "institution": "Anna University",
+    "year": 2015
+  },
+  "certifications": [
+    "AWS Certified Developer – Associate",
+    "Meta React Developer Certificate"
+  ],
+  "keywords": [
+    "FullStack Architect", "Frontend Architect", "React", "Next.js", "TypeScript",
+    "FastAPI", "Python", "MCP", "Claude SDK", "Agentic AI", "Applied AI",
+    "Micro-frontends", "Design System", "PostgreSQL", "asyncio", "SSE",
+    "Human-in-the-Loop", "ReAct", "Docker", "Bangalore", "Remote"
+  ]
+}

@@ -1,0 +1,76 @@
+databases:
+  - name: jobhunt-db
+    plan: free
+    databaseName: jobhunt
+    user: jobhunt
+
+services:
+  - type: web
+    name: jobhunt-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && alembic upgrade head
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: jobhunt-db
+          property: connectionString
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: RAPIDAPI_KEY
+        sync: false
+      - key: NAUKRI_API_KEY
+        sync: false
+      - key: WELLFOUND_API_KEY
+        sync: false
+      - key: API_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        fromService:
+          name: jobhunt-frontend
+          type: web
+          property: host
+      - key: FIT_SCORE_THRESHOLD
+        value: "65"
+      - key: MAX_TAILOR_RETRIES
+        value: "3"
+
+  - type: web
+    name: jobhunt-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    plan: starter
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          name: jobhunt-backend
+          type: web
+          property: host
+
+  - type: cron
+    name: jobhunt-discovery
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    schedule: "0 2 * * *"  # 02:00 UTC = 07:30 IST
+    command: python cron_runner.py
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: jobhunt-db
+          property: connectionString
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: RAPIDAPI_KEY
+        sync: false
+      - key: NAUKRI_API_KEY
+        sync: false
+      - key: WELLFOUND_API_KEY
+        sync: false
+      - key: FIT_SCORE_THRESHOLD
+        value: "65"
